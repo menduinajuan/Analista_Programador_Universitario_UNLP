@@ -1,18 +1,18 @@
 programa TP12_E3b
 procesos
-  proceso juntarFloresEsquina (ES flores : numero)
+  proceso juntarFloresEsquina (ES flores: numero)
   comenzar
     mientras (HayFlorEnLaEsquina)
       tomarFlor
-      flores := flores + 1
+      flores:=flores+1
   fin
-  proceso juntarPapelesEsquina (ES papeles : numero)
+  proceso juntarPapelesEsquina (ES papeles: numero)
   comenzar
     mientras (HayPapelEnLaEsquina)
       tomarPapel
-      papeles := papeles + 1
+      papeles:=papeles+1
   fin
-  proceso juntarFlores (ES flores : numero)
+  proceso juntarFlores (ES flores: numero)
   comenzar
     repetir 9
       si (HayFlorEnLaEsquina)
@@ -21,7 +21,7 @@ procesos
     si (HayFlorEnLaEsquina)
       juntarFloresEsquina(flores)
   fin
-  proceso juntarPapeles (ES papeles : numero)
+  proceso juntarPapeles (ES papeles: numero)
   comenzar
     repetir 9
       si (HayPapelEnLaEsquina)
@@ -31,20 +31,20 @@ procesos
       juntarPapelesEsquina(papeles)
   fin
 areas
-  areaA1a : AreaP(1,1,10,1)
-  areaA1b : AreaP(21,1,30,1)
-  areaA2a : AreaP(11,1,20,1)
-  areaA2b : AreaP(31,1,40,1)
-  areaB1a : AreaP(1,5,10,5)
-  areaB1b : AreaP(21,5,30,5)
-  areaB2a : AreaP(11,5,20,5)
-  areaB2b : AreaP(31,5,40,5)
+  areaA1a: AreaP(1,1,10,1)
+  areaA1b: AreaP(21,1,30,1)
+  areaA2a: AreaP(11,1,20,1)
+  areaA2b: AreaP(31,1,40,1)
+  areaB1a: AreaP(1,5,10,5)
+  areaB1b: AreaP(21,5,30,5)
+  areaB2a: AreaP(11,5,20,5)
+  areaB2b: AreaP(31,5,40,5)
 robots
   robot tipoA1
   variables
-    papeles : numero
+    papeles: numero
   comenzar
-    papeles := 0
+    papeles:=0
     derecha
     juntarPapeles(papeles)
     EnviarMensaje(papeles,robotA2)
@@ -55,7 +55,7 @@ robots
   fin
   robot tipoA2
   variables
-    papeles : numero
+    papeles: numero
   comenzar
     RecibirMensaje(papeles,robotA1)
     derecha
@@ -68,9 +68,9 @@ robots
   fin
   robot tipoB1
   variables
-    flores : numero
+    flores: numero
   comenzar
-    flores := 0
+    flores:=0
     derecha
     juntarFlores(flores)
     EnviarMensaje(flores,robotB2)
@@ -81,7 +81,7 @@ robots
   fin
   robot tipoB2
   variables
-    flores : numero
+    flores: numero
   comenzar
     RecibirMensaje(flores,robotB1)
     derecha
@@ -93,10 +93,10 @@ robots
     Informar ('TotalPapelesEquipoB',flores)
   fin
 variables
-  robotA1 : tipoA1
-  robotA2 : tipoA2
-  robotB1 : tipoB1
-  robotB2 : tipoB2
+  robotA1: tipoA1
+  robotA2: tipoA2
+  robotB1: tipoB1
+  robotB2: tipoB2
 comenzar
   AsignarArea(robotA1,areaA1a)
   AsignarArea(robotA1,areaA1b)

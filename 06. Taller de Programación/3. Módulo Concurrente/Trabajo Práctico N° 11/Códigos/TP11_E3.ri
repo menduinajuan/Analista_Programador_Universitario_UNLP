@@ -1,30 +1,30 @@
 programa TP11_E3
 procesos
-  proceso contarFloresEsquina (ES flores : numero)
+  proceso contarFloresEsquina (ES flores: numero)
   variables
-    flores_esq : numero
+    flores_esq: numero
   comenzar
-    flores_esq := 0
+    flores_esq:=0
     mientras (HayFlorEnLaEsquina)
       tomarFlor
-      flores := flores + 1
-      flores_esq := flores_esq + 1
+      flores:=flores+1
+      flores_esq:=flores_esq+1
     repetir flores_esq
       depositarFlor
   fin
-  proceso contarPapelesEsquina (ES papeles : numero)
+  proceso contarPapelesEsquina (ES papeles: numero)
   variables
-    papeles_esq : numero
+    papeles_esq: numero
   comenzar
-    papeles_esq := 0
+    papeles_esq:=0
     mientras (HayPapelEnLaEsquina)
       tomarPapel
-      papeles := papeles + 1
-      papeles_esq := papeles_esq + 1
+      papeles:=papeles+1
+      papeles_esq:=papeles_esq+1
     repetir papeles_esq
       depositarPapel
   fin
-  proceso escalon (ES flores : numero ; ES papeles : numero ; E pasos : numero)
+  proceso escalon (ES flores: numero; ES papeles: numero; E pasos: numero)
   comenzar
     repetir 2
       repetir pasos
@@ -35,32 +35,32 @@ procesos
     repetir 2
       derecha
   fin
-  proceso escalera (ES escalones : numero)
+  proceso escalera (ES escalones: numero)
   variables
-    flores, papeles, pasos : numero
+    flores, papeles, pasos: numero
   comenzar
-    pasos := 1
+    pasos:=1
     repetir 4
-      flores := 0
-      papeles := 0
+      flores:=0
+      papeles:=0
       escalon(flores,papeles,pasos)
-      pasos := pasos + 1
-      si (papeles > flores)
-        escalones := escalones + 1
+      pasos:=pasos+1
+      si (papeles-flores=1)
+        escalones:=escalones+1
   fin
 areas
-  ciudad : AreaC(1,1,100,100)
+  ciudad: AreaC(1,1,100,100)
 robots
   robot tipo1
   variables
-    escalones : numero
+    escalones: numero
   comenzar
-    cant := 0
+    escalones:=0
     escalera(escalones)
-    Informar ('EscalonesConMásPapeles',escalones)
+    Informar ('EscalonesConUnPapelMás',escalones)
   fin
 variables
-  robot1, robot2, robot3 : tipo1
+  robot1, robot2, robot3: tipo1
 comenzar
   AsignarArea(robot1,ciudad)
   AsignarArea(robot2,ciudad)
