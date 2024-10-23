@@ -5,31 +5,31 @@ procesos
     repetir 3
       derecha
   fin
-  proceso juntarFloresEsquina (ES flores : numero)
+  proceso juntarFloresEsquina (ES flores: numero)
   comenzar
     mientras (HayFlorEnLaEsquina)
       tomarFlor
-      flores := flores + 1
+      flores:=flores+1
   fin
-  proceso juntarPapelesEsquina (ES papeles : numero)
+  proceso juntarPapelesEsquina (ES papeles: numero)
   comenzar
     mientras (HayPapelEnLaEsquina)
       tomarPapel
-      papeles := papeles + 1
+      papeles:=papeles+1
   fin
-  proceso esquina (ES flores : numero ; ES papeles : numero)
+  proceso esquina (ES flores: numero; ES papeles: numero)
   comenzar
     si (HayFlorEnLaEsquina)
       juntarFloresEsquina(flores)
     si (HayPapelEnLaEsquina) 
       juntarPapelesEsquina(papeles)
   fin
-  proceso escalon (E alto : numero ; ES escalones : numero)
+  proceso escalon (E alto: numero; ES escalones: numero)
   variables
-    flores, papeles : numero
+    flores, papeles: numero
   comenzar
-    flores := 0
-    papeles := 0
+    flores:=0
+    papeles:=0
     repetir alto
       esquina(flores,papeles)
       mover
@@ -37,40 +37,43 @@ procesos
     derecha
     mover
     izquierda
-    si (flores > papeles)
-      escalones := escalones + 1
+    si (flores>papeles)
+      escalones:=escalones+1
   fin
 areas
-  ciudad : AreaC(1,1,100,100)
+  area1: AreaP(2,1,6,21)
+  area2: AreaP(7,1,11,21)
+  area3: AreaP(12,1,16,21)
+  areaJ: AreaP(1,1,1,1)
 robots
   robot tipo1
   variables
-    alto, escalones : numero
+    alto, escalones: numero
   comenzar
-    escalones := 0
+    escalones:=0
     repetir 4
       Random(alto,1,5)
       escalon(alto,escalones)
     EnviarMensaje(escalones,robotJ)
   fin
-  robot jefe
+  robot tipoJ
   variables
-    suma, escalones : numero
+    sumaEscalones, escalones: numero
   comenzar
-    suma := 0
+    sumaEscalones:=0
     repetir 3
       RecibirMensaje(escalones,*)
-      suma := suma + escalones
-    Informar ('Suma',suma)
+      sumaEscalones:=sumaEscalones+escalones
+    Informar ('SumaEscalones',sumaEscalones)
   fin
 variables
-  robot1, robot2, robot3 : tipo1
-  robotJ : jefe
+  robot1, robot2, robot3: tipo1
+  robotJ: tipoJ
 comenzar
-  AsignarArea(robot1,ciudad)
-  AsignarArea(robot2,ciudad)
-  AsignarArea(robot3,ciudad)
-  AsignarArea(robotJ,ciudad)
+  AsignarArea(robot1,area1)
+  AsignarArea(robot2,area2)
+  AsignarArea(robot3,area3)
+  AsignarArea(robotJ,areaJ)
   Iniciar(robot1,2,1)
   Iniciar(robot2,7,1)
   Iniciar(robot3,12,1)
