@@ -10,33 +10,41 @@ Escribir tres métodos de clase, donde respectivamente:
 
 package tp1.ejercicio5;
 
-import java.util.concurrent.ThreadLocalRandom;
+import PaqueteLectura.*;
 
 public class TP1_E5 {
 
     public static void main(String[] args) {
 
-        int dimF=1+ThreadLocalRandom.current().nextInt(10);
+        GeneradorAleatorio.iniciar();
+
+        int dimF=1+GeneradorAleatorio.generarInt(10);
         int numMax=100;
-        int[] vector=new int[dimF];
+        int[] vectorNums=new int[dimF];
         Resultados resultados=new Resultados();
 
         for (int i=0; i<dimF; i++)
-            vector[i]=1+ThreadLocalRandom.current().nextInt(numMax);
-        Calculadoras.setVector(vector);
+            vectorNums[i]=1+GeneradorAleatorio.generarInt(numMax);
 
-        System.out.print("Elementos del vector: ");
-        for (int i=0; i<dimF; i++)
-            System.out.print(vector[i] + " ");
+        System.out.print("Elementos del vector nums: ");
+        for (int i: vectorNums)
+            System.out.print(i + " ");
+
+        // INCISO (a)
 
         System.out.println();
-        System.out.println("CALCULADORA A: " + Calculadoras.calculadoraA().toString());
+        System.out.println("CALCULADORA A: " + Calculadoras.calculadoraA(vectorNums).toString());
 
-        Calculadoras.calculadoraB(resultados);
+        // INCISO (b)
+
+        Calculadoras.calculadoraB(vectorNums, resultados);
         System.out.println("CALCULADORA B: " + resultados.toString());
 
-        Calculadoras.calculadoraC();
-        System.out.println("CALCULADORA C: " + Calculadoras.getResultados().toString());
+        // INCISO (c)
+
+        Calculadoras objCalculadoraC=new Calculadoras();
+        objCalculadoraC.calculadoraC(vectorNums);
+        System.out.println("CALCULADORA C: " + objCalculadoraC.getResultados().toString());
 
     }
 
