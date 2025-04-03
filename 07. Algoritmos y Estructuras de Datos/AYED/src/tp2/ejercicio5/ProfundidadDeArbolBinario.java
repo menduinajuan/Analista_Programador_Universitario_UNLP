@@ -18,8 +18,8 @@ public class ProfundidadDeArbolBinario {
         if (p==nivelActual) return ab.getData();
         else {
             int suma=0;
-            if (ab.hasLeftChild())  suma+=sumaElementosProfundidad(p, ab.getLeftChild(), ++nivelActual);
-            if (ab.hasRightChild()) suma+=sumaElementosProfundidad(p, ab.getRightChild(), ++nivelActual);
+            if (ab.hasLeftChild())  suma+=sumaElementosProfundidad(p, ab.getLeftChild(), nivelActual+1);
+            if (ab.hasRightChild()) suma+=sumaElementosProfundidad(p, ab.getRightChild(), nivelActual+1);
             return suma;
         }
     }
