@@ -1,0 +1,75 @@
+393 919.00 LG
+42 3 Gama media alta
+XIAACGOITU
+515 248.30 Motorola
+100 8 Gama media alta
+HTNRZVAZI
+810 225.20 Nokia
+69 8 Gama alta
+FHPVKW
+777 532.80 Apple
+74 8 Gama alta
+WPATGQHX
+29 348.10 Huawei
+68 4 Gama alta
+DFILNPMR
+491 977.30 Xiaomi
+12 4 Gama media baja
+ZTPTPAJBAE
+193 537.30 LG
+77 2 Gama alta
+TFKRGIVDU
+935 239.10 Nokia
+10 2 Gama baja
+NJIZD
+114 727.10 Huawei
+100 4 Gama baja
+RSRUOOAJ
+348 622.90 Apple
+55 8 Gama media baja
+EGPTWLGO
+327 544.50 LG
+38 10 Gama alta
+HFEHOYJD
+420 731.50 Nokia
+55 8 Gama media alta
+WZZIIULGH
+347 368.00 Lenovo
+89 1 Gama media alta
+FHRMRGAB
+742 420.40 LG
+65 3 Gama media alta
+VVAAFUQ
+772 585.80 Alcatel
+10 5 Gama media alta
+KLSCP
+42 195.60 LG
+37 2 Gama alta
+OUUIN
+303 319.00 Nokia
+29 10 Gama alta
+BBRILURMCV
+29 494.30 Motorola
+6 1 Gama media
+DFDOSXT
+487 866.10 Sony
+76 8 Gama media alta
+VSNDUY
+163 601.90 LG
+97 2 Gama media baja
+KSEQDNZ
+58 432.40 Alcatel
+67 1 Gama alta
+UCVGMY
+925 362.00 Motorola
+13 1 Gama alta
+QXMNIRJ
+275 745.20 Huawei
+92 2 Gama baja
+DXEFBUUBOF
+696 820.10 Apple
+70 2 Gama media baja
+XJMODQJ
+570 351.80 Xiaomi
+13 8 Gama media alta
+MERXJ
