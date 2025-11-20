@@ -5,12 +5,12 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>OO1_E4</groupId>
-    <artifactId>OO1_E4</artifactId>
+    <groupId>OO1_E5</groupId>
+    <artifactId>OO1_E5</artifactId>
     <version>1.0.0</version>
-    <name>OO1_E4</name>
+    <name>OO1_E5</name>
     <packaging>jar</packaging>
-    <description>Ejercicio 4 - Balanza Mejorada</description>
+    <description>Ejercicio 5 - Inversores</description>
     <properties>
             <java.version>11</java.version>
             <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
